@@ -1,0 +1,123 @@
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+body {
+  font-family: 'Inter', sans-serif;
+  background-color: #1a1a1a;
+}
+
+@layer base {
+  :root {
+    --background: 260 0% 8%;
+    --foreground: 0 0% 98%;
+    --card: 260 0% 12%;
+    --card-foreground: 0 0% 98%;
+    --popover: 260 0% 8%;
+    --popover-foreground: 0 0% 98%;
+    --primary: 180 80% 45%;
+    --primary-hsl: 180 80% 45%;
+    --primary-foreground: 0 0% 98%;
+    --secondary: 240 3.7% 20.9%;
+    --secondary-foreground: 0 0% 98%;
+    --muted: 240 3.7% 15.9%;
+    --muted-foreground: 240 5% 64.9%;
+    --accent: 240 3.7% 20.9%;
+    --accent-foreground: 0 0% 98%;
+    --destructive: 0 62.8% 30.6%;
+    --destructive-foreground: 0 0% 98%;
+    --border: 240 3.7% 25.9%;
+    --input: 240 3.7% 15.9%;
+    --ring: 180 80% 50%;
+    --radius: 0.5rem;
+    --chart-1: 180 80% 45%;
+    --chart-2: 120 80% 45%;
+    --chart-3: 30 80% 55%;
+    --chart-4: 280 65% 60%;
+    --chart-5: 340 75% 55%;
+  }
+
+  .dark {
+    --background: 260 0% 8%;
+    --foreground: 0 0% 98%;
+    --card: 260 0% 12%;
+    --card-foreground: 0 0% 98%;
+    --popover: 260 0% 8%;
+    --popover-foreground: 0 0% 98%;
+    --primary: 180 80% 45%;
+    --primary-hsl: 180 80% 45%;
+    --primary-foreground: 0 0% 98%;
+    --secondary: 240 3.7% 20.9%;
+    --secondary-foreground: 0 0% 98%;
+    --muted: 240 3.7% 15.9%;
+    --muted-foreground: 240 5% 64.9%;
+    --accent: 240 3.7% 20.9%;
+    --accent-foreground: 0 0% 98%;
+    --destructive: 0 62.8% 30.6%;
+    --destructive-foreground: 0 0% 98%;
+    --border: 240 3.7% 25.9%;
+    --input: 240 3.7% 15.9%;
+    --ring: 180 80% 50%;
+    --chart-1: 180 80% 45%;
+    --chart-2: 120 80% 45%;
+    --chart-3: 30 80% 55%;
+    --chart-4: 280 65% 60%;
+    --chart-5: 340 75% 55%;
+  }
+}
+
+@layer base {
+  * {
+    @apply border-border;
+  }
+  body {
+    @apply bg-background text-foreground;
+  }
+}
+
+.grid-bg {
+  background-image:
+    linear-gradient(to right, hsl(var(--border) / 0.4) 1px, transparent 1px),
+    linear-gradient(to bottom, hsl(var(--border) / 0.4) 1px, transparent 1px);
+  background-size: 20px 20px;
+}
+
+/* Enhanced neural network animations */
+@keyframes neuron-pulse {
+  0%, 100% {
+    transform: scale(1);
+    box-shadow: 0 0 12px rgba(59, 130, 246, 0.6);
+  }
+  50% {
+    transform: scale(1.05);
+    box-shadow: 0 0 24px rgba(59, 130, 246, 0.9);
+  }
+}
+
+@keyframes connection-flow {
+  0% {
+    stroke-dashoffset: 100;
+  }
+  100% {
+    stroke-dashoffset: 0;
+  }
+}
+
+@keyframes glow-pulse {
+  0%, 100% {
+    filter: drop-shadow(0 0 3px rgba(59, 130, 246, 0.5));
+  }
+  50% {
+    filter: drop-shadow(0 0 8px rgba(59, 130, 246, 0.8));
+  }
+}
+
+.neuron-active {
+  animation: neuron-pulse 2s ease-in-out infinite;
+}
+
+.connection-active {
+  animation: glow-pulse 2s ease-in-out infinite;
+  stroke-dasharray: 5,5;
+  animation: connection-flow 1s linear infinite, glow-pulse 2s ease-in-out infinite;
+}
