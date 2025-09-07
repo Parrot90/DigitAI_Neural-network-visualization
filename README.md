@@ -2,6 +2,8 @@
 
 An interactive web application for training and visualizing neural networks on the MNIST handwritten digit recognition dataset.
 
+Please use the Custom Train at First Then it will predict and Please Ignore the AI warning the data overfit 
+
 ## 🎯 Features
 
 ### **Interactive Neural Network Training**
@@ -103,4 +105,5 @@ Future Scope
 ### **Planned Enhancements** 🚧
 - Dynamic weight visualization with color-coded connections
 - Layer-by-layer activity analysis
+
 - Gradient flow visualization during training
